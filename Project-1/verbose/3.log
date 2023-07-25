@@ -1,0 +1,106 @@
+=== RUN   Test3
+11:13:56.782103 [0] listening at [::]:38745
+11:13:56.782786 [1] listening at [::]:44757
+11:13:56.783176 [2] listening at [::]:33871
+11:13:56.783502 [3] listening at [::]:33647
+11:13:56.783807 [4] listening at [::]:40383
+11:13:56.790690 AT NODE 4: Election timer started: 4.237s, with term=0
+11:13:56.790692 AT NODE 1: Election timer started: 3.678s, with term=0
+11:13:56.790698 AT NODE 0: Election timer started: 3.18s, with term=0
+11:13:56.790698 AT NODE 2: Election timer started: 5.697s, with term=0
+11:13:56.790810 AT NODE 3: Election timer started: 5.265s, with term=0
+11:13:59.992213 AT NODE 0: became Candidate with term=1;
+11:13:59.992924 AT NODE 0: Election timer started: 3s, with term=1
+11:13:59.993037 AT NODE 0: sending RequestVote to 4: {Term:1 CandidateId:0 LastLogIndex:-1 LastLogTerm:-1 Latency:376}
+11:13:59.993053 AT NODE 0: sending RequestVote to 1: {Term:1 CandidateId:0 LastLogIndex:-1 LastLogTerm:-1 Latency:480}
+11:13:59.993093 AT NODE 0: sending RequestVote to 2: {Term:1 CandidateId:0 LastLogIndex:-1 LastLogTerm:-1 Latency:90}
+11:13:59.993106 AT NODE 0: sending RequestVote to 3: {Term:1 CandidateId:0 LastLogIndex:-1 LastLogTerm:-1 Latency:343}
+11:14:00.106653 AT NODE 2: Received Vote Request from NODE 0; Args: {Term:1 CandidateId:0 LastLogIndex:-1 LastLogTerm:-1 Latency:90} [currentTerm=0, votedFor=-1, log index/term=(-1, -1)]
+11:14:00.106790 AT NODE 2: became Follower with term=1; log=[]
+11:14:00.106958 AT NODE 2: Sending Request Vote Reply: &{Term:1 VoteGranted:true}
+11:14:00.107115 AT NODE 2: Election timer started: 3.765s, with term=1
+11:14:00.108738 AT NODE 0: received RequestVoteReply from 2: {Term:1 VoteGranted:true}
+11:14:00.359061 AT NODE 3: Received Vote Request from NODE 0; Args: {Term:1 CandidateId:0 LastLogIndex:-1 LastLogTerm:-1 Latency:343} [currentTerm=0, votedFor=-1, log index/term=(-1, -1)]
+11:14:00.359162 AT NODE 3: became Follower with term=1; log=[]
+11:14:00.359269 AT NODE 3: Sending Request Vote Reply: &{Term:1 VoteGranted:true}
+11:14:00.359397 AT NODE 3: Election timer started: 3.966s, with term=1
+11:14:00.360538 AT NODE 0: received RequestVoteReply from 3: {Term:1 VoteGranted:true}
+11:14:00.360617 AT NODE 0: won the election
+11:14:00.360806 AT NODE 0: became Leader; term=1, nextIndex=map[1:0 2:0 3:0 4:0], matchIndex=map[1:-1 2:-1 3:-1 4:-1]; log=[]
+11:14:00.391512 AT NODE 4: Received Vote Request from NODE 0; Args: {Term:1 CandidateId:0 LastLogIndex:-1 LastLogTerm:-1 Latency:376} [currentTerm=0, votedFor=-1, log index/term=(-1, -1)]
+11:14:00.391604 AT NODE 4: became Follower with term=1; log=[]
+11:14:00.391710 AT NODE 4: Sending Request Vote Reply: &{Term:1 VoteGranted:true}
+11:14:00.391827 AT NODE 4: Election timer started: 5.62s, with term=1
+11:14:00.393103 AT NODE 0: received RequestVoteReply from 4: {Term:1 VoteGranted:true}
+11:14:00.393202 AT NODE 0: State changed from Candidate to Leader
+11:14:00.496539 AT NODE 1: Received Vote Request from NODE 0; Args: {Term:1 CandidateId:0 LastLogIndex:-1 LastLogTerm:-1 Latency:480} [currentTerm=0, votedFor=-1, log index/term=(-1, -1)]
+11:14:00.496669 AT NODE 1: became Follower with term=1; log=[]
+11:14:00.496805 AT NODE 1: Sending Request Vote Reply: &{Term:1 VoteGranted:true}
+11:14:00.496991 AT NODE 1: Election timer started: 4.528s, with term=1
+11:14:00.497834 AT NODE 0: received RequestVoteReply from 1: {Term:1 VoteGranted:true}
+11:14:00.497878 AT NODE 0: State changed from Candidate to Leader
+11:14:00.505332 AT NODE 0: appending entries success
+11:14:00.542982 [ACTION] Disconnecting 0
+11:14:04.307700 AT NODE 2: became Candidate with term=2;
+11:14:04.308004 AT NODE 2: Election timer started: 4.879s, with term=2
+11:14:04.308124 AT NODE 2: sending RequestVote to 0: {Term:2 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1 Latency:111}
+11:14:04.308217 AT NODE 2: sending RequestVote to 3: {Term:2 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1 Latency:49}
+11:14:04.308290 AT NODE 2: sending RequestVote to 1: {Term:2 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1 Latency:438}
+11:14:04.308516 AT NODE 2: sending RequestVote to 4: {Term:2 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1 Latency:494}
+11:14:04.378900 AT NODE 3: Received Vote Request from NODE 2; Args: {Term:2 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1 Latency:49} [currentTerm=1, votedFor=0, log index/term=(-1, -1)]
+11:14:04.379028 AT NODE 3: became Follower with term=2; log=[]
+11:14:04.379145 AT NODE 3: Sending Request Vote Reply: &{Term:2 VoteGranted:true}
+11:14:04.379284 AT NODE 3: Election timer started: 3.001s, with term=2
+11:14:04.380174 AT NODE 2: received RequestVoteReply from 3: {Term:2 VoteGranted:true}
+11:14:04.768379 AT NODE 1: Received Vote Request from NODE 2; Args: {Term:2 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1 Latency:438} [currentTerm=1, votedFor=0, log index/term=(-1, -1)]
+11:14:04.768487 AT NODE 1: became Follower with term=2; log=[]
+11:14:04.768698 AT NODE 1: Sending Request Vote Reply: &{Term:2 VoteGranted:true}
+11:14:04.768818 AT NODE 1: Election timer started: 5.418s, with term=2
+11:14:04.769949 AT NODE 2: received RequestVoteReply from 1: {Term:2 VoteGranted:true}
+11:14:04.770023 AT NODE 2: won the election
+11:14:04.770208 AT NODE 2: became Leader; term=2, nextIndex=map[0:0 1:0 3:0 4:0], matchIndex=map[0:-1 1:-1 3:-1 4:-1]; log=[]
+11:14:04.815050 AT NODE 2: appending entries success
+11:14:04.825188 AT NODE 4: Received Vote Request from NODE 2; Args: {Term:2 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1 Latency:494} [currentTerm=1, votedFor=0, log index/term=(-1, -1)]
+11:14:04.825280 AT NODE 4: became Follower with term=2; log=[]
+11:14:04.825359 AT NODE 4: Sending Request Vote Reply: &{Term:2 VoteGranted:true}
+11:14:04.825564 AT NODE 4: Election timer started: 4.263s, with term=2
+11:14:04.826131 AT NODE 2: received RequestVoteReply from 4: {Term:2 VoteGranted:true}
+11:14:04.826177 AT NODE 2: State changed from Candidate to Leader
+11:14:05.037024 AT NODE 2: appending entries success
+11:14:05.047041 [ACTION] Disconnecting 2
+11:14:08.180150 AT NODE 3: became Candidate with term=3;
+11:14:08.180446 AT NODE 3: sending RequestVote to 4: {Term:3 CandidateId:3 LastLogIndex:-1 LastLogTerm:-1 Latency:147}
+11:14:08.180570 AT NODE 3: sending RequestVote to 1: {Term:3 CandidateId:3 LastLogIndex:-1 LastLogTerm:-1 Latency:230}
+11:14:08.180643 AT NODE 3: sending RequestVote to 0: {Term:3 CandidateId:3 LastLogIndex:-1 LastLogTerm:-1 Latency:458}
+11:14:08.180707 AT NODE 3: Election timer started: 5.985s, with term=3
+11:14:08.180604 AT NODE 3: sending RequestVote to 2: {Term:3 CandidateId:3 LastLogIndex:-1 LastLogTerm:-1 Latency:240}
+11:14:08.348919 AT NODE 4: Received Vote Request from NODE 3; Args: {Term:3 CandidateId:3 LastLogIndex:-1 LastLogTerm:-1 Latency:147} [currentTerm=2, votedFor=2, log index/term=(-1, -1)]
+11:14:08.349069 AT NODE 4: became Follower with term=3; log=[]
+11:14:08.349197 AT NODE 4: Sending Request Vote Reply: &{Term:3 VoteGranted:true}
+11:14:08.349366 AT NODE 4: Election timer started: 3.801s, with term=3
+11:14:08.350696 AT NODE 3: received RequestVoteReply from 4: {Term:3 VoteGranted:true}
+11:14:08.433124 AT NODE 1: Received Vote Request from NODE 3; Args: {Term:3 CandidateId:3 LastLogIndex:-1 LastLogTerm:-1 Latency:230} [currentTerm=2, votedFor=2, log index/term=(-1, -1)]
+11:14:08.433496 AT NODE 1: became Follower with term=3; log=[]
+11:14:08.433650 AT NODE 1: Sending Request Vote Reply: &{Term:3 VoteGranted:true}
+11:14:08.433812 AT NODE 1: Election timer started: 5.381s, with term=3
+11:14:08.434942 AT NODE 3: received RequestVoteReply from 1: {Term:3 VoteGranted:true}
+11:14:08.435024 AT NODE 3: won the election
+11:14:08.435201 AT NODE 3: became Leader; term=3, nextIndex=map[0:0 1:0 2:0 4:0], matchIndex=map[0:-1 1:-1 2:-1 4:-1]; log=[]
+11:14:08.504564 AT NODE 3: appending entries success
+11:14:08.701035 AT NODE 3: appending entries success
+11:14:08.800009 [ACTION] Disconnecting 3
+11:14:11.801759 [ACTION] Reconnecting 0
+11:14:11.803650 [ACTION] Reconnecting 2
+    raft_cluster.go:134: Somehow have more than one leader!!!!!
+11:14:11.806775 AT NODE 0: KILLED
+11:14:11.806914 AT NODE 0: applyCommitedLogEntries done
+11:14:11.806918 AT NODE 1: KILLED
+11:14:11.807029 AT NODE 1: applyCommitedLogEntries done
+11:14:11.807057 AT NODE 2: KILLED
+11:14:11.807200 AT NODE 2: applyCommitedLogEntries done
+11:14:11.807272 AT NODE 4: KILLED
+11:14:11.807336 AT NODE 4: applyCommitedLogEntries done
+--- FAIL: Test3 (15.03s)
+FAIL
+exit status 1
+FAIL	RaftLogReplication	15.056s
